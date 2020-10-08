@@ -1,13 +1,14 @@
 package com.qiaomu.controller;
 
+import com.alibaba.druid.support.json.JSONUtils;
+import com.alibaba.fastjson.JSON;
 import com.qiaomu.common.CommonResult;
 import com.qiaomu.entities.Payment;
+import com.qiaomu.entities.TestDTO;
 import com.qiaomu.service.PaymentService;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 
@@ -24,8 +25,14 @@ public class PaymentController {
     @Resource
     private PaymentService paymentService;
 
-    @PostMapping(value = "/payment/create")
-    public CommonResult create(Payment payment){
+    @PostMapping(value = "/payment/test", produces = MediaType.APPLICATION_JSON_VALUE)
+    public CommonResult test(@RequestBody TestDTO testDTO){
+        log.info(JSON.toJSONString(testDTO));
+        return new CommonResult(200,"插入数据库成功",null);
+    }
+
+    @PostMapping(value = "/payment/create", produces = MediaType.APPLICATION_JSON_VALUE)
+    public CommonResult create(@RequestBody Payment payment){
         int result = paymentService.create(payment);
         log.info("*****插入结果："+result);
         if (result>0){  //成功

@@ -4,11 +4,15 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * Hello world!
+ * @author: kexiong
+ * @date: 2020/10/8 19:18
+ * @Description: TODO
  */
 @SpringBootApplication
-public class Payment8001APP {
+public class OrderMain80 {
     public static void main(String[] args) {
-        SpringApplication.run(Payment8001APP.class);
+        SpringApplication.run(OrderMain80.class,args);
     }
+
 }
+
