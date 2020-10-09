@@ -1,6 +1,7 @@
 package com.qiaomu.service.impl;
 
 import com.qiaomu.dao.PaymentDao;
+import com.qiaomu.entities.Payment;
 import com.qiaomu.service.PaymentService;
 import org.springframework.stereotype.Service;
 

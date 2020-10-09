@@ -7,8 +7,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * Hello world!
  */
 @SpringBootApplication
-public class Payment8001APP {
+public class Payment8001 {
     public static void main(String[] args) {
-        SpringApplication.run(Payment8001APP.class);
+        SpringApplication.run(Payment8001.class);
     }
 }
