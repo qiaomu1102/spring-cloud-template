@@ -1,6 +1,5 @@
 package com.qiaomu.dao;
 
-import com.qiaomu.entities.Payment;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 

@@ -47,6 +47,12 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>com.qiaomu</groupId>
+            <artifactId>cloud-commons</artifactId>
+            <version>1.0</version>
+        </dependency>
     </dependencies>
 
 </project>

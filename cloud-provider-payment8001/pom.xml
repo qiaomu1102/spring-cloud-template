@@ -91,6 +91,11 @@
             <artifactId>fastjson</artifactId>
             <version>1.1.41</version>
         </dependency>
+        <dependency>
+            <groupId>com.qiaomu</groupId>
+            <artifactId>cloud-commons</artifactId>
+            <version>1.0</version>
+        </dependency>
 
     </dependencies>
 
