@@ -15,22 +15,28 @@ import javax.annotation.Resource;
  */
 @Slf4j
 @RestController
+@RequestMapping("/consumer")
 public class OrderController {
 
-    public static final String payment_url = "http://localhost:8001";
+    public static final String payment_url = "http://cloud-payment-service";
 
     @Resource
     private RestTemplate restTemplate;
 
-    @PostMapping("/consumer/payment/create")
+    @PostMapping("/payment/create")
     public CommonResult<Payment> create(@RequestBody Payment payment) {
 //        log.info("/consumer/payment/create=====================");
         return restTemplate.postForObject(payment_url + "/payment/create", payment, CommonResult.class);
     }
 
-    @GetMapping("/consumer/payment/get/{id}")
+    @GetMapping("/payment/get/{id}")
     public CommonResult<Payment> getPayment(@PathVariable("id") Long id) {
         return restTemplate.getForObject(payment_url + "/payment/get/" + id, CommonResult.class);
+    }
+
+    @GetMapping("/payment/test")
+    public CommonResult<Payment> test() {
+        return restTemplate.getForObject(payment_url + "/payment/test", CommonResult.class);
     }
 
 }
