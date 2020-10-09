@@ -2,18 +2,18 @@ package com.qiaomu;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 /**
  * @author: kexiong
- * @date: 2020/10/8 19:18
+ * @date: 2020/10/9 11:10
  * @Description: TODO
  */
-@EnableEurekaClient
+@EnableEurekaServer
 @SpringBootApplication
-public class OrderMain80 {
+public class EurekaMain7001 {
     public static void main(String[] args) {
-        SpringApplication.run(OrderMain80.class,args);
+        SpringApplication.run(EurekaMain7001.class,args);
     }
 
 }

@@ -16,6 +16,10 @@
     <url>http://www.example.com</url>
 
     <dependencies>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
         <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -94,7 +98,7 @@
         <dependency>
             <groupId>com.qiaomu</groupId>
             <artifactId>cloud-commons</artifactId>
-            <version>1.0</version>
+            <version>${project.version}</version>
         </dependency>
 
     </dependencies>
