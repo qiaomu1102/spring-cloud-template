@@ -35,4 +35,9 @@ public class OrderFeignController {
         return paymentFeignService.loadBalance();
     }
 
+    @GetMapping(value = "/timeout")
+    public String timeout() {
+        return paymentFeignService.feignTimeout();
+    }
+
 }
